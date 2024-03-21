@@ -72,7 +72,7 @@ const News = () => {
     template();
   },[])
   len=Dupli.length-1;
-  
+  console.log(len);
   function cards(item){
     if(id){
   if(item[3]==id){  
@@ -85,12 +85,16 @@ const News = () => {
         Name={item[3]}
         Url={item[4]}
         ReporterAddress={item[6]}
+        N={false}
         state = {state}
       />
       
       </>
       
     )
+  }
+  else{
+    len--
   }
 }
 else{
@@ -103,6 +107,7 @@ else{
       Name={item[3]}
       Url={item[4]}
       ReporterAddress={item[6]}
+      N={true}
       state = {state}
     />
     
